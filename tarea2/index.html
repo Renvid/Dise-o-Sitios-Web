@@ -85,10 +85,16 @@ ul.icons li {
     padding: 0 1.25em 0 0;
 }
 
+.moveMenu{
+	position: fixed;
+	top:0;
+	background: #fff;
+}
+
 </style>
 </head>
 <body>
-<div class="row">
+<div class="row" id="Menu">
 <div class="column column-25"><h3 style="margin-left: 5%; padding-top: 15px;">Ion</h3></div>
 <div class="column column-75 clearfix">
 		<ul class="ulclass">
@@ -268,6 +274,19 @@ ul.icons li {
 </div>
 </div>
 </footer>
+<script type="text/javascript">
+	window.onscroll = function() {myFunction()};
 
+var navbar = document.getElementById("Menu");
+var moveMenu = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= moveMenu) {
+    navbar.classList.add("moveMenu")
+  } else {
+    navbar.classList.remove("moveMenu");
+  }
+}
+</script>
 </body>
 </html>
