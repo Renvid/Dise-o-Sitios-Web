@@ -1,0 +1,834 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<!-- Title -->
+	<title>DECLARACIÓN DEL IMPUESTO SOBRE BIENES INMUEBLES</title>
+
+	<!-- Font Awesome -->
+	<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+	rel="stylesheet"
+	/>
+	<!-- Google Fonts -->
+	<link
+	href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+	rel="stylesheet"
+	/>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet"/>
+	<link href="styles/multiselect.css" rel="stylesheet"/>
+	<script src="multiselect.min.js"></script>
+</head>
+<body>
+	<main> 
+		<div class="page-inner">	
+			<div class="row" style="margin:1% ">
+				<div class="card" >
+					<div class="card-header">
+						<h3 style="text-align: center;">MUNICIPALIDAD DE DESAMPARADOS</h3><br/>
+						<h4 style="text-align: center;">DECLARACIÓN DEL IMPUESTO SOBRE BIENES INMUEBLES</h4>
+					</div>
+					<div class="card-body">
+						<form class="needs-validation" novalidate>
+							<section id="datos principales">
+								<div class="row">
+									<p class="card-text">El contribuyente solicitó asistencia
+										del funcionario Municipal para
+									completar la presente Declaración</p>
+									<div class="row col-8">
+										<div class="col-4">
+											<div class="form-check">
+												<input type="radio" class="form-check-input" id="validationFormCheck2" name="radio-stacke" required>
+												<label class="form-check-label" for="validationFormCheck2">Si</label>
+											</div>
+											<div class="form-check mb-3">
+												<input type="radio" class="form-check-input" id="validationFormCheck3" name="radio-stacke" required>
+												<label class="form-check-label" for="validationFormCheck3">No</label>
+												<div class="invalid-feedback">Debe seleciconar alguna de los dos</div>
+											</div>
+										</div>
+										<div class="col-8">
+											<div class="mb-3">
+												<p class="card-text">Adjuntar copia de la firma</p>
+												<input type="file" class="form-control" aria-label="file example" required>
+												<div class="invalid-feedback">Adjuntar firma</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-4">
+										<div class="position-relative">
+											<label class="form-label">ZONA HOMOGENEA</label>
+											<input type="text" class="form-control" placeholder="Nombre de la zona homogenea" required>
+											<div class="invalid-feedback">
+												Digite la zona homogenea
+											</div>
+										</div>
+									</div>
+								</div>
+								
+							</section>
+							<hr/>
+							<!-- Seccion para CUADRO I. IDENTIFICACIÓN DEL PROPIETARIO-->
+							<section id="PROPIETARIO">
+								<div class="row">
+									<div class="col-12 d-flex justify-content-center">
+										<h4>CUADRO I. IDENTIFICACIÓN DEL PROPIETARIO</h4>
+									</div>
+									<hr />
+									<div class="col-12 col-lg-4 position-relative">
+										<label class="form-label">1. N° DE CÉDULA (física o jurídica)</label>
+										<input type="text" class="form-control" required placeholder="Ejemplo:3-101-005 ">
+										<div class="invalid-feedback">
+											Digite un N° DE CÉDULA (física o jurídica) válido
+										</div>
+									</div>
+									<div class="col-12 col-lg-8 position-relative">
+										<label class="form-label">2. APELLIDOS Y NOMBRE O RAZÓN SOCIAL</label>
+										<input type="text" class="form-control" placeholder="Juan Quesada Vargas o nombre sociedad " required>
+										<div class="invalid-feedback">
+											Digite el nombre y apellidos o razón social
+										</div>
+									</div>
+									<div class="col-12 col-lg-12 position-relative">
+										<label class="form-label">3. DOMICILIO FISCAL (SEÑAS)</label>
+										<input type="text" class="form-control" placeholder="Dirección exacta donde el propietario del bien inmueble recibe notificaciones." required>
+										<div class="invalid-feedback">
+											Digite el domicilio fiscal
+										</div>
+									</div>
+									<div class="col-12 col-lg-2 position-relative">
+										<label class="form-label">4. PROVINCIA</label>
+										<select class="form-select"  required>
+											<option selected value="">Seleccione alguna opción</option>
+											<option value="Alajuela">Alajuela</option>
+											<option value="Heredia">Heredia</option>
+											<option value="San José">San José</option>
+											<option value="Guanacaste">Guanacaste</option>
+											<option value="Puntarenas">Puntarenas</option>
+											<option value="Limón">Limón</option>
+											<option value="Cartago">Cartago</option>
+										</select>
+										<div class="invalid-feedback">
+											Selecciona alguna provincia
+										</div>
+									</div>
+									<div class="col-12 col-lg-2 position-relative">
+										<label class="form-label">5. N° CANTÓN</label>
+										<select class="form-select"  required>
+											<option selected value="">Seleccione alguna opción</option>
+											<option value="Abangares ">Abangares </option>
+											<option value="Bagaces ">Bagaces </option>
+											<option value="Cañas ">Cañas </option>
+											<option value="Desamparados ">Desamparados </option>
+											<option value="El Guarco">El Guarco</option>
+											<option value="...">...</option>
+										</select>
+										<div class="invalid-feedback">
+											Selecciona algún cantón
+										</div>
+									</div>
+									<div class="col-12 col-lg-2 position-relative">
+										<label class="form-label">6. DISTRITO</label>
+										<select class="form-select"  required>
+											<option selected value="">Seleccione alguna opción</option>
+											<option value="Tambor ">Tambor </option>
+											<option value="La Garita ">La Garita </option>
+											<option value="Sarapiquí ">Sarapiquí </option>
+											<option value="Zaragoza ">Zaragoza </option>
+											<option value="Santiago">Santiago</option>
+											<option value="...">...</option>
+										</select>
+										<div class="invalid-feedback">
+											Selecciona algún distrito
+										</div>
+									</div>
+									<div class=" col-12 col-lg-3">
+										<label class="form-label">7. N° TELEFONO</label>
+										<div class="input-group ">
+											<span class="input-group-text" ><i class="fas fa-phone"></i></span>
+											<input type="text" class="form-control" placeholder="88067745"  required>
+											<div class="invalid-feedback">
+												Digite un N° TELEFONO
+											</div>
+										</div>
+									</div>
+									<div class=" col-12 col-lg-3">
+										<label class="form-label">8. N° FAX</label>
+										<div class="input-group ">
+											<span class="input-group-text" ><i class="fas fa-fax"></i></span>
+											<input type="text" class="form-control" placeholder="941 446 227"  required>
+											<div class="invalid-feedback">
+												Digite un N° TELEFONO
+											</div>
+										</div>
+									</div>
+									<div class=" col-12 col-lg-12">
+										<label class="form-label">9. CORREO ELECTRONICO PARA NOTIFICACIONES:</label>
+										<div class="input-group ">
+											<span class="input-group-text" ><i class="fas fa-envelope"></i></span>
+											<input type="email" class="form-control" placeholder="m@gmail.com"  required>
+											<div class="invalid-feedback">
+												Digite un correo electronico valido
+											</div>
+										</div>
+									</div>
+									<hr/>
+									<div class="col-12 d-flex justify-content-center">
+										<h6>EN CASO DE PERSONA JURIDICA ANOTAR DATOS DEL REPRESENTANTE LEGAL</h6>
+									</div>
+									<hr/>
+									<div class="col-12 col-lg-4 position-relative">
+										<label class="form-label">10. N° DE CÉDULA</label>
+										<input type="text" class="form-control" required placeholder="Ejemplo:2-101-005 ">
+										<div class="invalid-feedback">
+											Digite un N° DE CÉDULA  válido
+										</div>
+									</div>
+									<div class="col-12 col-lg-8 position-relative">
+										<label class="form-label">11. NOMBRE Y APELLIDOS</label>
+										<input type="text" class="form-control" placeholder="Juan Quesada Vargas" required>
+										<div class="invalid-feedback">
+											Digite el nombre y apellidos
+										</div>
+									</div>
+									<div class="col-12 col-lg-12 position-relative">
+										<label class="form-label">12. DOMICILIO FISCAL (SEÑAS)</label>
+										<input type="text" class="form-control" placeholder="Dirección exacta donde el propietario del bien inmueble recibe notificaciones." required>
+										<div class="invalid-feedback">
+											Digite el domicilio fiscal
+										</div>
+									</div>
+									<div class="col-12 col-lg-2 position-relative">
+										<label class="form-label">13. PROVINCIA</label>
+										<select class="form-select"  required>
+											<option selected value="">Seleccione alguna opción</option>
+											<option value="Alajuela">Alajuela</option>
+											<option value="Heredia">Heredia</option>
+											<option value="San José">San José</option>
+											<option value="Guanacaste">Guanacaste</option>
+											<option value="Puntarenas">Puntarenas</option>
+											<option value="Limón">Limón</option>
+											<option value="Cartago">Cartago</option>
+										</select>
+										<div class="invalid-feedback">
+											Selecciona alguna provincia
+										</div>
+									</div>
+									<div class="col-12 col-lg-2 position-relative">
+										<label class="form-label">14. N° CANTÓN</label>
+										<select class="form-select"  required>
+											<option selected value="">Seleccione alguna opción</option>
+											<option value="Abangares ">Abangares </option>
+											<option value="Bagaces ">Bagaces </option>
+											<option value="Cañas ">Cañas </option>
+											<option value="Desamparados ">Desamparados </option>
+											<option value="El Guarco">El Guarco</option>
+											<option value="...">...</option>
+										</select>
+										<div class="invalid-feedback">
+											Selecciona algún cantón
+										</div>
+									</div>
+									<div class="col-12 col-lg-2 position-relative">
+										<label class="form-label">15. DISTRITO</label>
+										<select class="form-select"  required>
+											<option selected value="">Seleccione alguna opción</option>
+											<option value="Tambor ">Tambor </option>
+											<option value="La Garita ">La Garita </option>
+											<option value="Sarapiquí ">Sarapiquí </option>
+											<option value="Zaragoza ">Zaragoza </option>
+											<option value="Santiago">Santiago</option>
+											<option value="...">...</option>
+										</select>
+										<div class="invalid-feedback">
+											Selecciona algún distrito
+										</div>
+									</div>
+									<div class=" col-12 col-lg-3">
+										<label class="form-label">16. N° TELEFONO</label>
+										<div class="input-group ">
+											<span class="input-group-text" ><i class="fas fa-phone"></i></span>
+											<input type="text" class="form-control" placeholder="88067745"  required>
+											<div class="invalid-feedback">
+												Digite un N° TELEFONO
+											</div>
+										</div>
+									</div>
+									<div class=" col-12 col-lg-3">
+										<label class="form-label">17. N° FAX</label>
+										<div class="input-group ">
+											<span class="input-group-text" ><i class="fas fa-fax"></i></span>
+											<input type="text" class="form-control" placeholder="941 446 227"  required>
+											<div class="invalid-feedback">
+												Digite un N° TELEFONO
+											</div>
+										</div>
+									</div>
+									<div class=" col-12 col-lg-12">
+										<label class="form-label">18. CORREO ELECTRONICO PARA NOTIFICACIONES:</label>
+										<div class="input-group ">
+											<span class="input-group-text" ><i class="fas fa-envelope"></i></span>
+											<input type="email" class="form-control" placeholder="m@gmail.com"  required>
+											<div class="invalid-feedback">
+												Digite un correo electronico valido
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+							<hr/>
+							<!-- CUADRO II. IDENTIFICACIÓN DE LA PROPIEDAD-->
+							<section id="PROPIEDAD">
+								<div class="col-12 d-flex justify-content-center">
+									<h4>CUADRO II. IDENTIFICACIÓN DE LA PROPIEDAD</h4>
+								</div>
+								<hr />
+								<div class="row">
+									<div class="col-12 col-lg-2 d-flex justify-content-center" style="margin-top: 1%">
+										19. UBICACION
+									</div>
+									<div class="col-12 col-lg-4 position-relative">
+										<label class="form-label">Distrito</label>
+										<select class="form-select"  required>
+											<option selected value="">Seleccione alguna opción</option>
+											<option value="Tambor ">Tambor </option>
+											<option value="La Garita ">La Garita </option>
+											<option value="Sarapiquí ">Sarapiquí </option>
+											<option value="Zaragoza ">Zaragoza </option>
+											<option value="Santiago">Santiago</option>
+											<option value="...">...</option>
+										</select>
+										<div class="invalid-feedback">
+											Selecciona algún distrito
+										</div>
+									</div>
+									<div class="col-12 col-lg-6 position-relative">
+										<label class="form-label">Dirección Exacta</label>
+										<input type="text" class="form-control" placeholder="Avenida Central, entre calles 5 y 7" required>
+										<div class="invalid-feedback">
+											Digite la dirección exacta donde se ubica el bien inmueble a declarar
+										</div>
+									</div>
+									<div class="col-12 col-lg-12 position-relative">
+										<label class="form-label">20. N° DE FINCA</label>
+										<input type="text" class="form-control" placeholder="1-123456-000" required>
+										<div class="invalid-feedback">
+											Digite el número de finca (folio real o matrícula) del bien inmueble, cuyo valor se va a declarar
+										</div>
+									</div>
+									<div class="col-12 col-lg-8 position-relative">
+										<label class="form-label">21.N° PLANO CATASTRO</label>
+										<input type="text" class="form-control" placeholder="Indicar el número de plano catastrado que corresponde al bien inmueble a declarar." required>
+										<div class="invalid-feedback">
+											Indicar el número de plano catastrado que corresponde al bien inmueble a declarar.
+										</div>
+									</div>
+									<div class="col-12 col-lg-4 position-relative">
+										<label class="form-label">22. AREA (M CUADRADOS)</label>
+										<input type="text" class="form-control" placeholder="100 metro cuadrado" required>
+										<div class="invalid-feedback">
+											Indicar el área registral del terreno a declarar. En el caso de derechos indicar el área total del bien inmueble
+										</div>
+									</div>
+									<div class="col-12 col-lg-3 position-relative">
+										<label class="form-label">23. SERVICIOS PÚBLICOS QUE POSEE:</label>
+										<select id='testSelect1' style="width: 350%" multiple class="form-select" required>
+											<option value='Acera'>Acera</option>
+											<option value='Cordón y caño'>Cordón y caño</option>
+											<option value='Cañería'>Cañería</option>
+											<option value='Alcantarillado'>Alcantarillado</option>
+											<option value='Teléfono'>Teléfono</option>
+											<option value='Electricidad'>Electricidad</option>
+											<option value='Alumbrado Público'>Alumbrado Público</option>
+										</select>
+										<div class="invalid-feedback">
+											Seleccione alguna opción
+										</div>
+									</div>
+									<div class="col-12 col-lg-3 position-relative">
+										<label class="form-label">24. VIA ACCESO PRINCIPAL</label>
+										<select class="form-select"  required>
+											<option selected value="">Seleccione alguna opción</option>
+											<option value="Camino asfaltado ">Camino asfaltado </option>
+											<option value="camino de lastre">camino de lastre</option>
+											<option value="línea férrea ">línea férrea</option>
+											<option value="Alameda ">Alameda</option>
+											<option value="Camino de tierra">Camino de tierra</option>
+											<option value="Servidumbre">Servidumbre</option>
+										</select>
+										<div class="invalid-feedback">
+											Selecciona alguna via de acceso
+										</div>
+									</div>
+									<div class="col-12 col-lg-3 position-relative">
+										<label class="form-label">25. FRENTE PROPIEDAD</label>
+										<div class="input-group">
+											<input type="text" class="form-control" placeholder="10" required>
+											<span class="input-group-text">metros</span>
+											<div class="invalid-feedback">
+												Digite la cantidad de metros
+											</div>
+										</div>
+
+									</div>
+
+									<div class="col-12 col-lg-3 position-relative">
+										<label class="form-label">26. REGULARIDAD</label>
+										<div class="row">
+											<div class="col-6">
+												<div class="form-check">
+													<input type="radio" class="form-check-input" id="validationFormCheck2" name="radio-stacked" required>
+													<label class="form-check-label" for="validationFormCheck2">Regular</label>
+												</div>
+												<div class="form-check mb-3">
+													<input type="radio" class="form-check-input" id="validationFormCheck3" name="radio-stacked" required>
+													<label class="form-check-label" for="validationFormCheck3">Irregular</label>
+													<div class="invalid-feedback">Debe seleciconar alguno de los dos</div>
+												</div>
+											</div>
+											<div class="col-6">
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="10" required>
+													<span class="input-group-text">%</span>
+													<div class="invalid-feedback">
+														Digite el procentaje
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-12 col-lg-3 position-relative">
+										<label class="form-label">27. PENDIENTE:</label>
+										<select class="form-select"  required>
+											<option selected value="">Seleccione alguna opción</option>
+											<option value="Plano (0 - 5%)">Plano (0 - 5%) </option>
+											<option value="Ondulado (5-15%)">Ondulado (5-15%)</option>
+											<option value="accidentado (16 -30%)">accidentado (16 -30%)</option>
+											<option value="Muy accidentado (30-45%)">Muy accidentado (30-45%)</option>
+											<option value="Quebrado (45-60%)">Quebrado (45-60%)</option>
+											<option value="Muy quebrado (más de 60%)">Muy quebrado (más de 60%)</option>
+										</select>
+										<div class="invalid-feedback">
+											Selecciona alguna pendiente
+										</div>
+									</div>
+									<div class="col-12 col-lg-6 position-relative">
+										<label class="form-label">28. NIVEL</label>
+										<div class="row">
+											<div class="col-4">
+												<div class="input-group col-4">
+													<span class="input-group-text">A nivel</span>
+													<input type="text" class="form-control" required="" placeholder="10">
+													<div class="invalid-feedback">
+														Complete el espacio solicitado
+													</div>
+												</div>
+											</div>
+											<div class="col-4">
+												<div class="input-group col-4">
+													<span class="input-group-text">Sobre nivel</span>
+													<input type="text" class="form-control" required="" placeholder="100">
+													<span class="input-group-text">Metros</span>
+													<div class="invalid-feedback">
+														Complete el espacio solicitado
+													</div>
+												</div>
+											</div>
+											<div class="col-4">
+												<div class="input-group">
+													<span class="input-group-text">Bajo nivel</span>
+													<input type="text" class="form-control" required="" placeholder="100">
+													<span class="input-group-text">Metros</span>
+													<div class="invalid-feedback">
+														Complete el espacio solicitado
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</div>
+									<div class="col-12 col-lg-3 position-relative">
+										<label class="form-label">29.UBICACIÓN EN LA MANZANA:</label>
+										<select class="form-select"  required>
+											<option selected value="">Seleccione alguna opción</option>
+											<option value="Manzanero">Manzanero</option>
+											<option value="Medianero">Medianero</option>
+											<option value="cabecero">cabecero</option>
+											<option value="En callejón lateral">En callejón lateral</option>
+											<option value="esquinero">esquinero</option>
+											<option value="En callejón al fondo">En callejón al fondo</option>
+											<option value="medianero con dos frentes">medianero con dos frentes</option>
+										</select>
+										<div class="invalid-feedback">
+											Selecciona alguna pendiente
+										</div>
+									</div>
+									<div class="col-12 col-lg-3 position-relative">
+										<label class="form-label">30. HIDROLOGIA</label>
+										<select class="form-select"  required>
+											<option selected value="">Seleccione alguna opción</option>
+											<option value="Excelente">Excelente</option>
+											<option value="Bueno">Bueno</option>
+											<option value="Muy bueno">Muy bueno</option>
+											<option value="Regular">Regular</option>
+											<option value="Malo">Malo</option>
+										</select>
+										<div class="invalid-feedback">
+											Selecciona alguna pendiente
+										</div>
+									</div>
+									<div class="col-12 col-lg-3 position-relative">
+										<label class="form-label">31. USO DEL SUELO</label>
+										<select class="form-select"  required>
+											<option selected value="">Seleccione alguna opción</option>
+											<option value="Excelente">Excelente</option>
+											<option value="Bueno">Bueno</option>
+											<option value="Muy bueno">Muy bueno</option>
+											<option value="Regular">Regular</option>
+											<option value="Malo">Malo</option>
+										</select>
+										<div class="invalid-feedback">
+											Selecciona alguna pendiente
+										</div>
+									</div>
+									<div class="col-12 col-lg-6 position-relative">
+										<label class="form-label">32. VALOR UNITARIO DEL TERRENO</label>
+										<div class="row">
+											<div class="col-6">
+												<div class="input-group">
+													<span class="input-group-text">¢</span>
+													<input type="text" class="form-control" required="" placeholder="10000000">
+													<span class="input-group-text">Metro cuadrado</span>
+													<div class="invalid-feedback">
+														Complete el espacio solicitado
+													</div>
+												</div>
+											</div>
+											<div class="col-6">
+												<div class="input-group">
+													<span class="input-group-text">¢</span>
+													<input type="text" class="form-control" required="" placeholder="1000">
+													<span class="input-group-text">Hectárea</span>
+													<div class="invalid-feedback">
+														Complete el espacio solicitado
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</div>
+									<div class="col-12 col-lg-12 position-relative">
+										<label class="form-label">32. VALOR UNITARIO DEL TERRENO</label>
+										<div class="row">
+											<div class="col-6">
+												<div class="input-group">
+													<span class="input-group-text">¢</span>
+													<input type="text" class="form-control" required="" placeholder="10000000">
+													<div class="invalid-feedback">
+														Complete el espacio solicitado
+													</div>
+												</div>
+											</div>
+											<div class="col-6">
+												<label class="form-label">(casilla 22Xcasilla 32)</label>
+												<br/>
+												<label class="form-label">Pasar a casilla N°49</label>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</section>
+							<hr/>
+							<!-- CUADRO III. DESCRIPCIÓN DE CONSTRUCCIONES, INSTALACIONES Y OBRAS COMPLEMENTARIAS-->
+							<section id="DESCRIPCIÓN">
+								<div class="col-12 d-flex justify-content-center">
+									<h4>CUADRO III. DESCRIPCIÓN DE CONSTRUCCIONES, INSTALACIONES Y OBRAS COMPLEMENTARIAS</h4>
+								</div>
+								<hr />
+								<table class="table table-bordered">
+									<thead>
+										<tr>
+											<th scope="col">34. USO</th>
+											<th scope="col">35. EDAD ACTUAL</th>
+											<th scope="col">36. ESTADO</th>
+											<th scope="col">37. N° PISOS</th>
+											<th scope="col">38. NÚMERO</th>
+											<th scope="col">39. AREA</th>
+											<th scope="col">40. VALOR</th>
+											<th scope="col">41.VALOR DE CONSTRUCCION</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<input type="text" class="form-control" required>
+												<div class="invalid-feedback">
+													Digite el uso
+												</div>
+											</td>
+											<td>
+												<input type="text" class="form-control" required>
+												<div class="invalid-feedback">
+													Digite el estado actual de la propiedad
+												</div>
+											</td>
+											<td>
+												<input type="text" class="form-control" required>
+												<div class="invalid-feedback">
+													Digite el estado
+												</div>
+											</td>
+											<td>
+												<input type="text" class="form-control" required>
+												<div class="invalid-feedback">
+													Diginte el N de pisos
+												</div>
+											</td>
+											<td>
+												<input type="text" class="form-control" required>
+												<div class="invalid-feedback">
+													Digite el numero
+												</div>
+											</td>
+											<td>
+												<input type="text" class="form-control" required>
+												<div class="invalid-feedback">
+													Digite el area
+												</div>
+											</td>
+											<td>
+												<input type="text" class="form-control" required>
+												<div class="invalid-feedback">
+													Digite el valor
+												</div>
+											</td>
+											<td>
+												<input type="text" class="form-control" required>
+												<div class="invalid-feedback">
+													Digite el valor de la construccion
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td><input type="text" class="form-control"></td>
+											<td><input type="text" class="form-control"></td>
+											<td><input type="text" class="form-control"></td>
+											<td><input type="text" class="form-control"></td>
+											<td><input type="text" class="form-control"></td>
+											<td><input type="text" class="form-control"></td>
+											<td><input type="text" class="form-control"></td>
+											<td><input type="text" class="form-control"></td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="row">
+									<div class="col-10">
+										<label class="form-label">42. VALOR TOTAL DE LAS CONSTRUCCIONES (Llevar a la casilla N° 50)</label>
+									</div>
+									<div class="col-2">
+										<div class="input-group">
+											<span class="input-group-text">¢</span>
+											<input type="text" class="form-control" required="" placeholder="10000000">
+											<div class="invalid-feedback">
+												Complete el espacio solicitado
+											</div>
+										</div>
+									</div>
+								</div>
+								<br/>
+								<table class="table table-bordered">
+									<thead>
+										<tr>
+											<th scope="col">43. DESCRIPCIÓN DE LA OBRA</th>
+											<th scope="col" colspan="2">44. PAREDES</th>
+											<th scope="col">45. CUBIERTA</th>
+											<th scope="col">46. CIELOS</th>
+											<th scope="col">47. PISOS</th>
+											<th scope="col">48. BAÑOS</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td></td>
+											<td><label>EXTERNAS</label></td>
+											<td><label>INTERNAS</label></td>
+											<td></td>
+											<td></td><td></td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>
+												<input type="text" class="form-control" required>
+												<div class="invalid-feedback">
+													Digite la descripcion
+												</div>
+											</td>
+											<td>
+												<input type="text" class="form-control" required>
+												<div class="invalid-feedback">
+													Digite a cantidad de paredes externas
+												</div>
+											</td>
+											<td>
+												<input type="text" class="form-control" required>
+												<div class="invalid-feedback">
+													Digite la cantidad de paredes internas
+												</div>
+											</td>
+											<td>
+												<input type="text" class="form-control" required>
+												<div class="invalid-feedback">
+													Digite la cubierta
+												</div>
+											</td>
+											<td>
+												<input type="text" class="form-control" required>
+												<div class="invalid-feedback">
+													Digite la cantidad de cielos
+												</div>
+											</td>
+											<td>
+												<input type="text" class="form-control" required>
+												<div class="invalid-feedback">
+													Digite la cantidad de pisos
+												</div>
+											</td>
+											<td>
+												<input type="text" class="form-control" required>
+												<div class="invalid-feedback">
+													Digite la cantidad de baños
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td><input type="text" class="form-control"></td>
+											<td><input type="text" class="form-control"></td>
+											<td><input type="text" class="form-control"></td>
+											<td><input type="text" class="form-control"></td>
+											<td><input type="text" class="form-control"></td>
+											<td><input type="text" class="form-control"></td>
+											<td><input type="text" class="form-control"></td>
+										</tr>
+									</tbody>
+								</table>
+							</section>
+							<hr/>
+							<section id="CUADRO IV. DETERMINACION DEL VALOR">
+								<div class="col-12 d-flex justify-content-center">
+									<h4>CUADRO IV. DETERMINACION DEL VALOR</h4>
+								</div>
+								<hr />
+								<div class="row">
+									<div class="col-8">
+										<label class="form-label">49. VALOR TOTAL DEL TERRENO (viene de casilla 33)</label>
+									</div>
+									<div class="col-4">
+										<div class="input-group">
+											<span class="input-group-text">¢</span>
+											<input type="text" class="form-control" required="" placeholder="10000000">
+											<div class="invalid-feedback">
+												Complete el espacio solicitado
+											</div>
+										</div>
+									</div>
+									<div class="col-8">
+										<label class="form-label">50. VALOR TOTAL DE LA CONSTRUCCION (viene de casilla 41)</label>
+									</div>
+									<div class="col-4">
+										<div class="input-group">
+											<span class="input-group-text">¢</span>
+											<input type="text" class="form-control" required="" placeholder="10000000">
+											<div class="invalid-feedback">
+												Complete el espacio solicitado
+											</div>
+										</div>
+									</div>
+									<div class="col-8">
+										<label class="form-label">51. VALOR TOTAL DEL TERRENO Y CONSTRUCCION</label>
+									</div>
+									<div class="col-4">
+										<div class="input-group">
+											<span class="input-group-text">¢</span>
+											<input type="text" class="form-control" required="" placeholder="10000000">
+											<div class="invalid-feedback">
+												Complete el espacio solicitado
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+							<hr/>
+							<SECTION id="Firma Final">
+								<div class="row">
+									<div class="col-2">
+										<p class="card-text">Declaro que toda la presente información es cierta, correcta y verdadera</p>
+									</div>
+									<div class="col-8">
+										<div class="mb-3">
+											<p class="card-text">Adjuntar copia de la firma</p>
+											<input type="file" class="form-control" aria-label="file example" required>
+											<div class="invalid-feedback">Adjuntar firma</div>
+										</div>
+									</div>
+									<div class="col-2">
+										<p class="card-text">Este formulario debe ser enviado al correo electronico bsandi@desamparados.go.cr. Consultas al telefono: 2217-3551</p>
+									</div>
+								</div>
+							</SECTION>
+							<hr/>
+							<div class="col-12 d-flex justify-content-end">
+								<button class="btn btn-primary" type="submit">Aceptar</button>
+							</div>
+
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+	'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+  .forEach(function (form) {
+  	form.addEventListener('submit', function (event) {
+  		if (!form.checkValidity()) {
+  			event.preventDefault()
+  			event.stopPropagation()
+  		}
+
+  		form.classList.add('was-validated')
+  	}, false)
+  })
+})()
+</script>
+<script>
+	document.multiselect('#testSelect1')
+	.setCheckBoxClick("checkboxAll", function(target, args) {
+		console.log("Checkbox 'Select All' was clicked and got value ", args.checked);
+	})
+	.setCheckBoxClick("1", function(target, args) {
+		console.log("Checkbox for item with value '1' was clicked and got value ", args.checked);
+	});
+</script>
+</body>
+</html>		
