@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Practica 7</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Practica 7</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="index.html">Distancia</a>
+        <a class="nav-item nav-link" href="temperatura.html">Temperatura</a>
+        <a class="nav-item nav-link" href="pesos.html">Peso</a>
+        <a class="nav-item nav-link" href="profesores.html">Profesores</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="card">
+      <h5 class="card-header d-flex justify-content-center">Distancia</h5>
+      <div class="card-body">
+        <div id="app" class="row">
+          <div class="col-4">
+            <input type="text" name="" v-model="valor" class="form-control">
+            <select v-model="ddl1" class="form-control">
+              <option v-for="option in options" 
+              v-bind:value="option.value">
+              {{ option.text }}
+            </option>
+          </select>
+        </div>
+        <div class="col-4 d-flex justify-content-center">
+         <h2> es igual a =></h2>
+       </div>
+       <div class="col-4">
+        <label >{{ resultado }}</label>
+        <select v-model="ddl2" class="form-control">
+          <option v-for="option in options" 
+          v-bind:value="option.value">
+          {{ option.text }}
+        </option>
+      </select>
+    </div>
+  </div>
+</div>
+<script>
+ var app = new Vue({
+  el: '#app',
+  data:{
+    valor:0,
+    resultado:0,
+    ddl1: 'metros',
+    ddl2: 'metros',
+    options: [
+    { text: 'metros', value: 'metros' },
+    { text: 'kilómetros', value: 'kilómetros' },
+    { text: 'centímetros', value: 'centímetros' },
+    { text: 'millas', value: 'millas' },
+    { text: 'yardas', value: 'yardas' },
+    { text: 'pies', value: 'pies' },
+    { text: 'pulgadas', value: 'pulgadas' }
+    ]
+  },
+  watch:{
+    valor:
+    function(valor){
+      switch(this.ddl1){
+        case 'metros':
+        switch(this.ddl2){
+          case 'metros':
+          this.resultado=parseFloat(this.valor);
+          break;
+          case 'kilómetros':
+          this.resultado=parseFloat(this.valor)/1000;
+          break;
+          case 'centímetros':
+          this.resultado=parseFloat(this.valor)*100;
+          break;
+          case 'millas':
+          this.resultado=parseFloat(this.valor)/1609;
+          break;
+          case 'yardas':
+          this.resultado=parseFloat(this.valor)*1.094;
+          break;
+          case 'pies':
+          this.resultado=parseFloat(this.valor)*3.281;
+          break;
+          case 'pulgadas':
+          this.resultado=parseFloat(this.valor)*39.37;
+          break;
+        }
+        break;
+        case 'kilómetros':
+        switch(this.ddl2){
+          case 'metros':
+          this.resultado=parseFloat(this.valor)*1000;
+          break;
+          case 'kilómetros':
+          this.resultado=parseFloat(this.valor);
+          break;
+          case 'centímetros':
+          this.resultado=parseFloat(this.valor)*100000;
+          break;
+          case 'millas':
+          this.resultado=parseFloat(this.valor)/1.609;
+          break;
+          case 'yardas':
+          this.resultado=parseFloat(this.valor)*1094;
+          break;
+          case 'pies':
+          this.resultado=parseFloat(this.valor)*3281;
+          break;
+          case 'pulgadas':
+          this.resultado=parseFloat(this.valor)*39370;
+          break;
+        }
+        break;
+        case 'centímetros':
+        switch(this.ddl2){
+          case 'metros':
+          this.resultado=parseFloat(this.valor)/100;
+          break;
+          case 'kilómetros':
+          this.resultado=parseFloat(this.valor)/100000;
+          break;
+          case 'centímetros':
+          this.resultado=parseFloat(this.valor);
+          break;
+          case 'millas':
+          this.resultado=parseFloat(this.valor)/160934;
+          break;
+          case 'yardas':
+          this.resultado=parseFloat(this.valor)/91.44;
+          break;
+          case 'pies':
+          this.resultado=parseFloat(this.valor)/30.48;
+          break;
+          case 'pulgadas':
+          this.resultado=parseFloat(this.valor)/2.54;
+          break;
+        }
+        break;
+        case 'millas':
+        switch(this.ddl2){
+          case 'metros':
+          this.resultado=parseFloat(this.valor)*1609;
+          break;
+          case 'kilómetros':
+          this.resultado=parseFloat(this.valor)*1.609;
+          break;
+          case 'centímetros':
+          this.resultado=parseFloat(this.valor)*160934;
+          break;
+          case 'millas':
+          this.resultado=parseFloat(this.valor);
+          break;
+          case 'yardas':
+          this.resultado=parseFloat(this.valor)*1760;
+          break;
+          case 'pies':
+          this.resultado=parseFloat(this.valor)*5280;
+          break;
+          case 'pulgadas':
+          this.resultado=parseFloat(this.valor)*63360;
+          break;
+        }
+        break;
+        case 'yardas':
+        switch(this.ddl2){
+          case 'metros':
+          this.resultado=parseFloat(this.valor)/1.094;
+          break;
+          case 'kilómetros':
+          this.resultado=parseFloat(this.valor)/1094;
+          break;
+          case 'centímetros':
+          this.resultado=parseFloat(this.valor)*91.44;
+          break;
+          case 'millas':
+          this.resultado=parseFloat(this.valor)/1760;
+          break;
+          case 'yardas':
+          this.resultado=parseFloat(this.valor);
+          break;
+          case 'pies':
+          this.resultado=parseFloat(this.valor)*3;
+          break;
+          case 'pulgadas':
+          this.resultado=parseFloat(this.valor)*36;
+          break;
+        }
+        break;
+        case 'pies':
+        switch(this.ddl2){
+          case 'metros':
+          this.resultado=parseFloat(this.valor)/3.281;
+          break;
+          case 'kilómetros':
+          this.resultado=parseFloat(this.valor)/3281;
+          break;
+          case 'centímetros':
+          this.resultado=parseFloat(this.valor)*30.48;
+          break;
+          case 'millas':
+          this.resultado=parseFloat(this.valor)/5280;
+          break;
+          case 'yardas':
+          this.resultado=parseFloat(this.valor)/3;
+          break;
+          case 'pies':
+          this.resultado=parseFloat(this.valor);
+          break;
+          case 'pulgadas':
+          this.resultado=parseFloat(this.valor)*12;
+          break;
+        }
+        break;
+        case 'pulgadas':
+        switch(this.ddl2){
+          case 'metros':
+          this.resultado=parseFloat(this.valor)/39.37;
+          break;
+          case 'kilómetros':
+          this.resultado=parseFloat(this.valor)/39370;
+          break;
+          case 'centímetros':
+          this.resultado=parseFloat(this.valor)/2.54;
+          break;
+          case 'millas':
+          this.resultado=parseFloat(this.valor)/63360;
+          break;
+          case 'yardas':
+          this.resultado=parseFloat(this.valor)/36;
+          break;
+          case 'pies':
+          this.resultado=parseFloat(this.valor)/12;
+          break;
+          case 'pulgadas':
+          this.resultado=parseFloat(this.valor);
+          break;
+        }
+        break;
+      }
+    },
+    ddl1:
+    function (tipoDDl1){
+      switch(tipoDDl1){
+        case 'metros':
+        switch(this.ddl2){
+          case 'metros':
+          this.resultado=parseFloat(this.valor);
+          break;
+          case 'kilómetros':
+          this.resultado=parseFloat(this.valor)/1000;
+          break;
+          case 'centímetros':
+          this.resultado=parseFloat(this.valor)*100;
+          break;
+          case 'millas':
+          this.resultado=parseFloat(this.valor)/1609;
+          break;
+          case 'yardas':
+          this.resultado=parseFloat(this.valor)*1.094;
+          break;
+          case 'pies':
+          this.resultado=parseFloat(this.valor)*3.281;
+          break;
+          case 'pulgadas':
+          this.resultado=parseFloat(this.valor)*39.37;
+          break;
+        }
+        break;
+        case 'kilómetros':
+        switch(this.ddl2){
+          case 'metros':
+          this.resultado=parseFloat(this.valor)*1000;
+          break;
+          case 'kilómetros':
+          this.resultado=parseFloat(this.valor);
+          break;
+          case 'centímetros':
+          this.resultado=parseFloat(this.valor)*100000;
+          break;
+          case 'millas':
+          this.resultado=parseFloat(this.valor)/1.609;
+          break;
+          case 'yardas':
+          this.resultado=parseFloat(this.valor)*1094;
+          break;
+          case 'pies':
+          this.resultado=parseFloat(this.valor)*3281;
+          break;
+          case 'pulgadas':
+          this.resultado=parseFloat(this.valor)*39370;
+          break;
+        }
+        break;
+        case 'centímetros':
+        switch(this.ddl2){
+          case 'metros':
+          this.resultado=parseFloat(this.valor)/100;
+          break;
+          case 'kilómetros':
+          this.resultado=parseFloat(this.valor)/100000;
+          break;
+          case 'centímetros':
+          this.resultado=parseFloat(this.valor);
+          break;
+          case 'millas':
+          this.resultado=parseFloat(this.valor)/160934;
+          break;
+          case 'yardas':
+          this.resultado=parseFloat(this.valor)/91.44;
+          break;
+          case 'pies':
+          this.resultado=parseFloat(this.valor)/30.48;
+          break;
+          case 'pulgadas':
+          this.resultado=parseFloat(this.valor)/2.54;
+          break;
+        }
+        break;
+        case 'millas':
+        switch(this.ddl2){
+          case 'metros':
+          this.resultado=parseFloat(this.valor)*1609;
+          break;
+          case 'kilómetros':
+          this.resultado=parseFloat(this.valor)*1.609;
+          break;
+          case 'centímetros':
+          this.resultado=parseFloat(this.valor)*160934;
+          break;
+          case 'millas':
+          this.resultado=parseFloat(this.valor);
+          break;
+          case 'yardas':
+          this.resultado=parseFloat(this.valor)*1760;
+          break;
+          case 'pies':
+          this.resultado=parseFloat(this.valor)*5280;
+          break;
+          case 'pulgadas':
+          this.resultado=parseFloat(this.valor)*63360;
+          break;
+        }
+        break;
+        case 'yardas':
+        switch(this.ddl2){
+          case 'metros':
+          this.resultado=parseFloat(this.valor)/1.094;
+          break;
+          case 'kilómetros':
+          this.resultado=parseFloat(this.valor)/1094;
+          break;
+          case 'centímetros':
+          this.resultado=parseFloat(this.valor)*91.44;
+          break;
+          case 'millas':
+          this.resultado=parseFloat(this.valor)/1760;
+          break;
+          case 'yardas':
+          this.resultado=parseFloat(this.valor);
+          break;
+          case 'pies':
+          this.resultado=parseFloat(this.valor)*3;
+          break;
+          case 'pulgadas':
+          this.resultado=parseFloat(this.valor)*36;
+          break;
+        }
+        break;
+        case 'pies':
+        switch(this.ddl2){
+          case 'metros':
+          this.resultado=parseFloat(this.valor)/3.281;
+          break;
+          case 'kilómetros':
+          this.resultado=parseFloat(this.valor)/3281;
+          break;
+          case 'centímetros':
+          this.resultado=parseFloat(this.valor)*30.48;
+          break;
+          case 'millas':
+          this.resultado=parseFloat(this.valor)/5280;
+          break;
+          case 'yardas':
+          this.resultado=parseFloat(this.valor)/3;
+          break;
+          case 'pies':
+          this.resultado=parseFloat(this.valor);
+          break;
+          case 'pulgadas':
+          this.resultado=parseFloat(this.valor)*12;
+          break;
+        }
+        break;
+        case 'pulgadas':
+        switch(this.ddl2){
+          case 'metros':
+          this.resultado=parseFloat(this.valor)/39.37;
+          break;
+          case 'kilómetros':
+          this.resultado=parseFloat(this.valor)/39370;
+          break;
+          case 'centímetros':
+          this.resultado=parseFloat(this.valor)/2.54;
+          break;
+          case 'millas':
+          this.resultado=parseFloat(this.valor)/63360;
+          break;
+          case 'yardas':
+          this.resultado=parseFloat(this.valor)/36;
+          break;
+          case 'pies':
+          this.resultado=parseFloat(this.valor)/12;
+          break;
+          case 'pulgadas':
+          this.resultado=parseFloat(this.valor);
+          break;
+        }
+        break;
+      }
+    },
+    ddl2:
+    function (tipoDDl2){
+      switch(this.ddl1){
+        case 'metros':
+        switch(tipoDDl2){
+          case 'metros':
+          this.resultado=parseFloat(this.valor);
+          break;
+          case 'kilómetros':
+          this.resultado=parseFloat(this.valor)/1000;
+          break;
+          case 'centímetros':
+          this.resultado=parseFloat(this.valor)*100;
+          break;
+          case 'millas':
+          this.resultado=parseFloat(this.valor)/1609;
+          break;
+          case 'yardas':
+          this.resultado=parseFloat(this.valor)*1.094;
+          break;
+          case 'pies':
+          this.resultado=parseFloat(this.valor)*3.281;
+          break;
+          case 'pulgadas':
+          this.resultado=parseFloat(this.valor)*39.37;
+          break;
+        }
+        break;
+        case 'kilómetros':
+        switch(tipoDDl2){
+          case 'metros':
+          this.resultado=parseFloat(this.valor)*1000;
+          break;
+          case 'kilómetros':
+          this.resultado=parseFloat(this.valor);
+          break;
+          case 'centímetros':
+          this.resultado=parseFloat(this.valor)*100000;
+          break;
+          case 'millas':
+          this.resultado=parseFloat(this.valor)/1.609;
+          break;
+          case 'yardas':
+          this.resultado=parseFloat(this.valor)*1094;
+          break;
+          case 'pies':
+          this.resultado=parseFloat(this.valor)*3281;
+          break;
+          case 'pulgadas':
+          this.resultado=parseFloat(this.valor)*39370;
+          break;
+        }
+        break;
+        case 'centímetros':
+        switch(tipoDDl2){
+          case 'metros':
+          this.resultado=parseFloat(this.valor)/100;
+          break;
+          case 'kilómetros':
+          this.resultado=parseFloat(this.valor)/100000;
+          break;
+          case 'centímetros':
+          this.resultado=parseFloat(this.valor);
+          break;
+          case 'millas':
+          this.resultado=parseFloat(this.valor)/160934;
+          break;
+          case 'yardas':
+          this.resultado=parseFloat(this.valor)/91.44;
+          break;
+          case 'pies':
+          this.resultado=parseFloat(this.valor)/30.48;
+          break;
+          case 'pulgadas':
+          this.resultado=parseFloat(this.valor)/2.54;
+          break;
+        }
+        break;
+        case 'millas':
+        switch(tipoDDl2){
+          case 'metros':
+          this.resultado=parseFloat(this.valor)*1609;
+          break;
+          case 'kilómetros':
+          this.resultado=parseFloat(this.valor)*1.609;
+          break;
+          case 'centímetros':
+          this.resultado=parseFloat(this.valor)*160934;
+          break;
+          case 'millas':
+          this.resultado=parseFloat(this.valor);
+          break;
+          case 'yardas':
+          this.resultado=parseFloat(this.valor)*1760;
+          break;
+          case 'pies':
+          this.resultado=parseFloat(this.valor)*5280;
+          break;
+          case 'pulgadas':
+          this.resultado=parseFloat(this.valor)*63360;
+          break;
+        }
+        break;
+        case 'yardas':
+        switch(tipoDDl2){
+          case 'metros':
+          this.resultado=parseFloat(this.valor)/1.094;
+          break;
+          case 'kilómetros':
+          this.resultado=parseFloat(this.valor)/1094;
+          break;
+          case 'centímetros':
+          this.resultado=parseFloat(this.valor)*91.44;
+          break;
+          case 'millas':
+          this.resultado=parseFloat(this.valor)/1760;
+          break;
+          case 'yardas':
+          this.resultado=parseFloat(this.valor);
+          break;
+          case 'pies':
+          this.resultado=parseFloat(this.valor)*3;
+          break;
+          case 'pulgadas':
+          this.resultado=parseFloat(this.valor)*36;
+          break;
+        }
+        break;
+        case 'pies':
+        switch(tipoDDl2){
+          case 'metros':
+          this.resultado=parseFloat(this.valor)/3.281;
+          break;
+          case 'kilómetros':
+          this.resultado=parseFloat(this.valor)/3281;
+          break;
+          case 'centímetros':
+          this.resultado=parseFloat(this.valor)*30.48;
+          break;
+          case 'millas':
+          this.resultado=parseFloat(this.valor)/5280;
+          break;
+          case 'yardas':
+          this.resultado=parseFloat(this.valor)/3;
+          break;
+          case 'pies':
+          this.resultado=parseFloat(this.valor);
+          break;
+          case 'pulgadas':
+          this.resultado=parseFloat(this.valor)*12;
+          break;
+        }
+        break;
+        case 'pulgadas':
+        switch(tipoDDl2){
+          case 'metros':
+          this.resultado=parseFloat(this.valor)/39.37;
+          break;
+          case 'kilómetros':
+          this.resultado=parseFloat(this.valor)/39370;
+          break;
+          case 'centímetros':
+          this.resultado=parseFloat(this.valor)/2.54;
+          break;
+          case 'millas':
+          this.resultado=parseFloat(this.valor)/63360;
+          break;
+          case 'yardas':
+          this.resultado=parseFloat(this.valor)/36;
+          break;
+          case 'pies':
+          this.resultado=parseFloat(this.valor)/12;
+          break;
+          case 'pulgadas':
+          this.resultado=parseFloat(this.valor);
+          break;
+        }
+        break;
+      }
+    }
+
+  }
+});
+
+</script>
+</body>
+</html>

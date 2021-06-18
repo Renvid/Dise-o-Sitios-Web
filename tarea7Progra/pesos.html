@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Practica 7</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Practica 7</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="index.html">Distancia</a>
+        <a class="nav-item nav-link" href="temperatura.html">Temperatura</a>
+        <a class="nav-item nav-link" href="pesos.html">Peso</a>
+        <a class="nav-item nav-link" href="profesores.html">Profesores</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="card">
+      <h5 class="card-header d-flex justify-content-center">Peso</h5>
+      <div class="card-body">
+        <div id="app" class="row">
+          <div class="col-4">
+            <input type="text" name="" v-model="valor" class="form-control">
+            <select v-model="ddl1" class="form-control">
+              <option v-for="option in options" 
+              v-bind:value="option.value">
+              {{ option.text }}
+            </option>
+          </select>
+        </div>
+        <div class="col-4 d-flex justify-content-center">
+         <h2> es igual a =></h2>
+       </div>
+       <div class="col-4">
+        <label >{{ resultado }}</label>
+        <select v-model="ddl2" class="form-control">
+          <option v-for="option in options" 
+          v-bind:value="option.value">
+          {{ option.text }}
+        </option>
+      </select>
+    </div>
+  </div>
+</div>
+<script>
+ var app = new Vue({
+  el: '#app',
+  data:{
+    valor:0,
+    resultado:0,
+    ddl1: 'kilos',
+    ddl2: 'kilos',
+    options: [
+    { text: 'kilos', value: 'kilos' },
+    { text: 'gramos', value: 'gramos' },
+    { text: 'toneladas métricas', value: 'toneladas métricas' },
+    { text: 'libras', value: 'libras' },
+    { text: 'onzas', value: 'onzas' }
+    ]
+  },
+  watch:{
+    valor:
+    function(valor){
+      switch(this.ddl1){
+        case 'kilos':
+        switch(this.ddl2){
+          case 'kilos':
+          this.resultado=parseFloat(this.valor);
+          break;
+          case 'gramos':
+          this.resultado=parseFloat(this.valor)*1000;
+          break;
+          case 'toneladas métricas':
+          this.resultado=parseFloat(this.valor)/1016;
+          break;
+          case 'libras':
+          this.resultado=parseFloat(this.valor)*2.205;
+          break;
+          case 'onzas':
+          this.resultado=parseFloat(this.valor)*35.274;
+          break;
+        }
+        break;
+        case 'gramos':
+        switch(this.ddl2){
+          case 'kilos':
+          this.resultado=parseFloat(this.valor)/1000;
+          break;
+          case 'gramos':
+          this.resultado=parseFloat(this.valor);
+          break;
+          case 'toneladas métricas':
+          this.resultado=parseFloat(this.valor)/907185;
+          break;
+          case 'libras':
+          this.resultado=parseFloat(this.valor)/454;
+          break;
+          case 'onzas':
+          this.resultado=parseFloat(this.valor)/28.35;
+          break;
+        }
+        break;
+        case 'toneladas métricas':
+        switch(this.ddl2){
+          case 'kilos':
+          this.resultado=parseFloat(this.valor)*1016;
+          break;
+          case 'gramos':
+          this.resultado=parseFloat(this.valor)*1.016e+6;
+          break;
+          case 'toneladas métricas':
+          this.resultado=parseFloat(this.valor);
+          break;
+          case 'libras':
+          this.resultado=parseFloat(this.valor)*2240;
+          break;
+          case 'onzas':
+          this.resultado=parseFloat(this.valor)*35840;
+          break;
+        }
+        break;
+        case 'libras':
+        switch(this.ddl2){
+          case 'kilos':
+          this.resultado=parseFloat(this.valor)/2.205;
+          break;
+          case 'gramos':
+          this.resultado=parseFloat(this.valor)*454;
+          break;
+          case 'toneladas métricas':
+          this.resultado=parseFloat(this.valor)/2240;
+          break;
+          case 'libras':
+          this.resultado=parseFloat(this.valor);
+          break;
+          case 'onzas':
+          this.resultado=parseFloat(this.valor)*16;
+          break;
+        }
+        break;
+        case 'onzas':
+        switch(this.ddl2){
+          case 'kilos':
+          this.resultado=parseFloat(this.valor)/35.274;
+          break;
+          case 'gramos':
+          this.resultado=parseFloat(this.valor)*28.35;
+          break;
+          case 'toneladas métricas':
+          this.resultado=parseFloat(this.valor)/35840;
+          break;
+          case 'libras':
+          this.resultado=parseFloat(this.valor)/16;
+          break;
+          case 'onzas':
+          this.resultado=parseFloat(this.valor);
+          break;
+        }
+        break;
+      }
+    },
+    ddl1:
+    function (tipoDDl1){
+      switch(tipoDDl1){
+        case 'kilos':
+        switch(this.ddl2){
+          case 'kilos':
+          this.resultado=parseFloat(this.valor);
+          break;
+          case 'gramos':
+          this.resultado=parseFloat(this.valor)*1000;
+          break;
+          case 'toneladas métricas':
+          this.resultado=parseFloat(this.valor)/1016;
+          break;
+          case 'libras':
+          this.resultado=parseFloat(this.valor)*2.205;
+          break;
+          case 'onzas':
+          this.resultado=parseFloat(this.valor)*35.274;
+          break;
+        }
+        break;
+        case 'gramos':
+        switch(this.ddl2){
+          case 'kilos':
+          this.resultado=parseFloat(this.valor)/1000;
+          break;
+          case 'gramos':
+          this.resultado=parseFloat(this.valor);
+          break;
+          case 'toneladas métricas':
+          this.resultado=parseFloat(this.valor)/907185;
+          break;
+          case 'libras':
+          this.resultado=parseFloat(this.valor)/454;
+          break;
+          case 'onzas':
+          this.resultado=parseFloat(this.valor)/28.35;
+          break;
+        }
+        break;
+        case 'toneladas métricas':
+        switch(this.ddl2){
+          case 'kilos':
+          this.resultado=parseFloat(this.valor)*1016;
+          break;
+          case 'gramos':
+          this.resultado=parseFloat(this.valor)*1.016e+6;
+          break;
+          case 'toneladas métricas':
+          this.resultado=parseFloat(this.valor);
+          break;
+          case 'libras':
+          this.resultado=parseFloat(this.valor)*2240;
+          break;
+          case 'onzas':
+          this.resultado=parseFloat(this.valor)*35840;
+          break;
+        }
+        break;
+        case 'libras':
+        switch(this.ddl2){
+          case 'kilos':
+          this.resultado=parseFloat(this.valor)/2.205;
+          break;
+          case 'gramos':
+          this.resultado=parseFloat(this.valor)*454;
+          break;
+          case 'toneladas métricas':
+          this.resultado=parseFloat(this.valor)/2240;
+          break;
+          case 'libras':
+          this.resultado=parseFloat(this.valor);
+          break;
+          case 'onzas':
+          this.resultado=parseFloat(this.valor)*16;
+          break;
+        }
+        break;
+        case 'onzas':
+        switch(this.ddl2){
+          case 'kilos':
+          this.resultado=parseFloat(this.valor)/35.274;
+          break;
+          case 'gramos':
+          this.resultado=parseFloat(this.valor)*28.35;
+          break;
+          case 'toneladas métricas':
+          this.resultado=parseFloat(this.valor)/35840;
+          break;
+          case 'libras':
+          this.resultado=parseFloat(this.valor)/16;
+          break;
+          case 'onzas':
+          this.resultado=parseFloat(this.valor);
+          break;
+        }
+        break;
+      }
+    },
+    ddl2:
+    function (tipoDDl2){
+      switch(this.ddl1){
+        case 'kilos':
+        switch(tipoDDl2){
+          case 'kilos':
+          this.resultado=parseFloat(this.valor);
+          break;
+          case 'gramos':
+          this.resultado=parseFloat(this.valor)*1000;
+          break;
+          case 'toneladas métricas':
+          this.resultado=parseFloat(this.valor)/1016;
+          break;
+          case 'libras':
+          this.resultado=parseFloat(this.valor)*2.205;
+          break;
+          case 'onzas':
+          this.resultado=parseFloat(this.valor)*35.274;
+          break;
+        }
+        break;
+        case 'gramos':
+        switch(tipoDDl2){
+          case 'kilos':
+          this.resultado=parseFloat(this.valor)/1000;
+          break;
+          case 'gramos':
+          this.resultado=parseFloat(this.valor);
+          break;
+          case 'toneladas métricas':
+          this.resultado=parseFloat(this.valor)/907185;
+          break;
+          case 'libras':
+          this.resultado=parseFloat(this.valor)/454;
+          break;
+          case 'onzas':
+          this.resultado=parseFloat(this.valor)/28.35;
+          break;
+        }
+        break;
+        case 'toneladas métricas':
+        switch(tipoDDl2){
+          case 'kilos':
+          this.resultado=parseFloat(this.valor)*1016;
+          break;
+          case 'gramos':
+          this.resultado=parseFloat(this.valor)*1.016e+6;
+          break;
+          case 'toneladas métricas':
+          this.resultado=parseFloat(this.valor);
+          break;
+          case 'libras':
+          this.resultado=parseFloat(this.valor)*2240;
+          break;
+          case 'onzas':
+          this.resultado=parseFloat(this.valor)*35840;
+          break;
+        }
+        break;
+        case 'libras':
+        switch(tipoDDl2){
+          case 'kilos':
+          this.resultado=parseFloat(this.valor)/2.205;
+          break;
+          case 'gramos':
+          this.resultado=parseFloat(this.valor)*454;
+          break;
+          case 'toneladas métricas':
+          this.resultado=parseFloat(this.valor)/2240;
+          break;
+          case 'libras':
+          this.resultado=parseFloat(this.valor);
+          break;
+          case 'onzas':
+          this.resultado=parseFloat(this.valor)*16;
+          break;
+        }
+        break;
+        case 'onzas':
+        switch(tipoDDl2){
+          case 'kilos':
+          this.resultado=parseFloat(this.valor)/35.274;
+          break;
+          case 'gramos':
+          this.resultado=parseFloat(this.valor)*28.35;
+          break;
+          case 'toneladas métricas':
+          this.resultado=parseFloat(this.valor)/35840;
+          break;
+          case 'libras':
+          this.resultado=parseFloat(this.valor)/16;
+          break;
+          case 'onzas':
+          this.resultado=parseFloat(this.valor);
+          break;
+        }
+        break;
+      }
+    }
+
+  }
+});
+
+</script>
+</body>
+</html>

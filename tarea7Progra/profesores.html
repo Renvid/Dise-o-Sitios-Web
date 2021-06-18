@@ -1,0 +1,68 @@
+<html>
+<head>
+	<title>Practica 7</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.x"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#">Practica 7</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			<div class="navbar-nav">
+				<a class="nav-item nav-link" href="index.html">Distancia</a>
+				<a class="nav-item nav-link" href="temperatura.html">Temperatura</a>
+				<a class="nav-item nav-link" href="pesos.html">Peso</a>
+				<a class="nav-item nav-link" href="profesores.html">Profesores</a>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="row">
+			<h1 style="text-align: center;margin-top: 50px;">Información de los profesores</h1>
+			<div class="col-md-12">
+				<table class="table table table-bordered" style="margin-top: 20px;">
+					<thead >
+						<tr style="background-color: lightblue">
+							<th>id</th>
+							<th>Nombre</th>
+							<th>Grado Académico</th>
+							<th>Email</th>
+							<th>Teléfono</th>
+						</tr>
+					</thead>
+					<tbody id="app">
+						<tr v-for="profesor in profesors">
+							<td> {{profesor.id }}</td>
+							<td>{{profesor.name}}</td>
+							<td>{{profesor.degree}}</td>
+							<td>{{profesor.email}}</td>
+							<td>{{profesor.phone}}</td>
+						</tr>
+					</tbody>
+					
+					
+				</table>
+			</div>
+		</div>
+
+	</div>
+
+	<script>
+		var app = new Vue({ 
+			el: '#app', 
+			data: {
+				profesors: [
+				{ id: "1",name: "Juan Perez",degree: "M.Sc.",email: "juan.perez@univ.ac",phone: "8944556"},
+				{id: "2",name: "Pedro  Castro",degree: "Ph.D",email: "pedro.castro@univ.ac",phone: "8944550"},
+				{id: "3",name: "Manuel Salas",degree: "Lic.",email: "manuel.salas@univ.ac", phone: "8944455"},
+				{id: "4",name: "Oscar Mora",degree: "M.Sc.", email: "oscar.mora@univ.ac",phone: "8944675"},
+				{ id: "5",name: "Pablo Cortez",degree: "Lic.",email: "pablo.cortez@univ.ac",phone: "8944999"}
+				]
+			}
+		})
+	</script>
+</body>
+</html>

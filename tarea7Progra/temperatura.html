@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Practica 7</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Practica 7</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="index.html">Distancia</a>
+        <a class="nav-item nav-link" href="temperatura.html">Temperatura</a>
+        <a class="nav-item nav-link" href="pesos.html">Peso</a>
+        <a class="nav-item nav-link" href="profesores.html">Profesores</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="card">
+      <h5 class="card-header d-flex justify-content-center">Temperatura</h5>
+      <div class="card-body">
+        <div id="app" class="row">
+          <div class="col-4">
+            <input type="text" name="" v-model="valor" class="form-control">
+            <select v-model="ddl1" class="form-control">
+              <option v-for="option in options" 
+              v-bind:value="option.value">
+              {{ option.text }}
+            </option>
+          </select>
+        </div>
+        <div class="col-4 d-flex justify-content-center">
+         <h2> es igual a =></h2>
+       </div>
+       <div class="col-4">
+        <label >{{ resultado }}</label>
+        <select v-model="ddl2" class="form-control">
+          <option v-for="option in options" 
+          v-bind:value="option.value">
+          {{ option.text }}
+        </option>
+      </select>
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
+<script>
+ var app = new Vue({
+  el: '#app',
+  data:{
+    valor:0,
+    resultado:0,
+    ddl1: 'celsius',
+    ddl2: 'celsius',
+    options: [
+    { text: 'celsius', value: 'celsius' },
+    { text: 'kelvin', value: 'kelvin' },
+    { text: 'fahrenheit', value: 'fahrenheit' }
+    ]
+  },
+  watch:{
+    valor:
+    function(valor){
+      switch(this.ddl1){
+        case 'celsius':
+        switch(this.ddl2){
+          case 'celsius':
+          this.resultado=parseFloat(this.valor);
+          break;
+          case 'kelvin':
+          this.resultado=parseFloat(this.valor)+273.15;
+          break;
+          case 'fahrenheit':
+          this.resultado=(parseFloat(this.valor)*(9/5))+32;
+          break;
+        }
+        break;
+        case 'kelvin':
+        switch(this.ddl2){
+          case 'celsius':
+          this.resultado=parseFloat(this.valor)-273.15;
+          break;
+          case 'kelvin':
+          this.resultado=parseFloat(this.valor);
+          break;
+          case 'fahrenheit':
+          this.resultado=(parseFloat(this.valor)-273.15)*(9/5)+32;
+          break;
+        }
+        break;
+        case 'fahrenheit':
+        switch(this.ddl2){
+          case 'celsius':
+          this.resultado=(parseFloat(this.valor)-32)*(5/9);
+          break;
+          case 'kelvin':
+          this.resultado=(parseFloat(this.valor)-32)*(5/9)+273.15;
+          break;
+          case 'fahrenheit':
+          this.resultado=parseFloat(this.valor);
+          break;
+        }
+        break;
+      }
+    },
+    ddl1:
+    function (tipoDDl1){
+      switch(tipoDDl1){
+        case 'celsius':
+        switch(this.ddl2){
+          case 'celsius':
+          this.resultado=parseFloat(this.valor);
+          break;
+          case 'kelvin':
+          this.resultado=parseFloat(this.valor)+273.15;
+          break;
+          case 'fahrenheit':
+          this.resultado=(parseFloat(this.valor)*(9/5))+32;
+          break;
+        }
+        break;
+        case 'kelvin':
+        switch(this.ddl2){
+          case 'celsius':
+          this.resultado=parseFloat(this.valor);
+          break;
+          case 'kelvin':
+          this.resultado=parseFloat(this.valor)+273.15;
+          break;
+          case 'fahrenheit':
+          this.resultado=(parseFloat(this.valor)*(9/5))+32;
+          break;
+        }
+        break;
+        case 'fahrenheit':
+        switch(this.ddl2){
+          case 'celsius':
+          this.resultado=(parseFloat(this.valor)-32)*(5/9);
+          break;
+          case 'kelvin':
+          this.resultado=(parseFloat(this.valor)-32)*(5/9)+273.15;
+          break;
+          case 'fahrenheit':
+          this.resultado=parseFloat(this.valor);
+          break;
+        }
+        break;
+      }
+    },
+    ddl2:
+    function (tipoDDl2){
+      switch(this.ddl1){
+        case 'celsius':
+        switch(tipoDDl2){
+          case 'celsius':
+          this.resultado=parseFloat(this.valor);
+          break;
+          case 'kelvin':
+          this.resultado=parseFloat(this.valor)+273.15;
+          break;
+          case 'fahrenheit':
+          this.resultado=(parseFloat(this.valor)*(9/5))+32;
+          break;
+        }
+        break;
+        case 'kelvin':
+        switch(tipoDDl2){
+          case 'celsius':
+          this.resultado=parseFloat(this.valor)-273.15;
+          break;
+          case 'kelvin':
+          this.resultado=parseFloat(this.valor);
+          break;
+          case 'fahrenheit':
+          this.resultado=(parseFloat(this.valor)-273.15)*(9/5)+32;
+          break;
+        }
+        break;
+        case 'fahrenheit':
+        switch(tipoDDl2){
+          case 'celsius':
+          this.resultado=(parseFloat(this.valor)-32)*(5/9);
+          break;
+          case 'kelvin':
+          this.resultado=(parseFloat(this.valor)-32)*(5/9)+273.15;
+          break;
+          case 'fahrenheit':
+          this.resultado=parseFloat(this.valor);
+          break;
+        }
+        break;
+      }
+    }
+
+  }
+});
+
+</script>
+</body>
+</html>
