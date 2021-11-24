@@ -1,0 +1,20 @@
+---
+id: pj_4
+title: Baratheon 
+casa: Casa Baratheon
+idCasa: casa_4
+image: personajes/pj4.jpg
+description: Robert tiene el aspecto clásico de Baratheon, cabello negro y ojos azules brillantes.  Su espeso cabello negro es espeso en su pecho y áspero alrededor de su sexo...
+---
+
+#  Baratheon
+
+Robert tiene el aspecto clásico de Baratheon : cabello negro y ojos azules brillantes.  Su espeso cabello negro es espeso en su pecho y áspero alrededor de su sexo.  Es un hombre muy alto;  Eddard Stark estima que su altura es de seis pies y medio. Cuando era un adulto joven, Robert era un hombre guapo,  bien afeitado,  con manos ásperas y duras.  Era fuerte y poderoso, y musculoso "como la fantasía de una doncella". En 289 AC , después de sofocar la rebelión de Greyjoy., La apariencia de Robert comenzó a cambiar. Debido al exceso de comida y bebida, Robert ganó una cantidad significativa de peso. En los nueve años transcurridos desde entonces, ganó al menos ocho piedras.  Ahora, a menudo está enrojecido por la bebida ,  con círculos oscuros debajo de los ojos, y camina como si estuviera medio en sus tazas, mientras suda a través de sus sedas. La barba de Robert, una cosa salvaje, espesa y feroz, oculta su papada. 
+
+Muy querido por los soldados,  Robert es valiente, pero testarudo, temerario e impaciente.  Es orgulloso,  y no es probable que se retracte de las palabras dichas con una bravuconería borracha.  Como rey, Robert ya no está acostumbrado a que alguien esté en desacuerdo con él,  y otros pueden manipularlo si se le aconseja que no haga algo.  Tyrion Lannister considera que Robert es un gran patán fanfarrón,  mientras que Varys lo describe como un tonto.  Cersei Lannister considera que su marido es un ignorante, un hombre tonto,  torpe, borracho, bruto,  que no tiene la vena despiadada que ella cree que requiere un rey.  Aunque varias personas consideran que Robert es valiente,  Cersei cree que es un cobarde.  Según Petyr Baelish , Robert tiene práctica en cerrar los ojos a las cosas que preferiría no ver. 
+
+Robert es tan fuerte como un toro y valiente en la batalla.  Le encanta el canto de espadas  y considera que el veneno es el arma de un cobarde.  Mientras sean honestos y valientes, Robert puede ser misericordioso con sus enemigos derrotados,  y puede inspirar lealtad y amistad en aquellos a quienes perdona.  La única excepción son los Targaryen ;  su odio por ellos es una locura dentro de él.  Un guerrero incomparable en su juventud, Robert luchó con un martillo de guerra de hierro con púas, elaborado en Storm's End por Donal Noye ,aunque también llevaba una espada. En la batalla, llevaba un gran casco con cuernos, que lo hacía parecer un dios con cuernos. Prefiere los melees, en los que puede golpear a la gente con su martillo, a las justas.  A pesar de las numerosas armas en la armería real, la única hoja que usa Robert es un cuchillo de caza que recibió cuando era niño de Jon Arryn , su padre adoptivo. Aunque su condición se ha deteriorado debido al aumento de peso y al consumo frecuente de alcohol,  Robert sigue siendo un hombre fuerte; Jaime Lannister cree que Robert es más fuerte que él. obert posee una poderosa voz en el campo de batalla.  King Robert's Hammer es el buque de guerra más grande de la flota real .
+
+Robert es un hombre de gran apetito, que sabe tomar sus placeres.  Es bastante promiscuo,  y ha sido padre de varios hijos bastardos . Sus concupiscencias son el tema de las obscenas canciones de bebida en todo el reino.  Como rey, Robert no se resiste a imponer la hospitalidad de sus súbditos, ya sea de forma voluntaria o forzada. Al mismo tiempo, sin embargo, Robert posee una generosidad grande, pero bastante descuidada.  Es un ávido cazador.  Algunas de las canciones favoritas de Robert son " A Cask of Ale ", " Fifty-Four Tuns " y " The Bear and the Maiden Fair".. " 
+
+Robert posee un jubón de terciopelo negro decorado con un ciervo dorado coronado,  un jubón verde  y un manto dorado con un manto de cuadrados negros y dorados.  Cuando monta a caballo , Robert usa gruesos guantes marrones y una pesada capa de piel con capucha. 

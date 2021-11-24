@@ -1,0 +1,23 @@
+{
+  "AppSearchInput": {
+    "description": "Auto imported from components/global/AppSearchInput.vue"
+  },
+  "PrevNextBatallas": {
+    "description": "Auto imported from components/global/PrevNextBatallas.vue"
+  },
+  "PrevNextCasas": {
+    "description": "Auto imported from components/global/PrevNextCasas.vue"
+  },
+  "PrevNextPersonajes": {
+    "description": "Auto imported from components/global/PrevNextPersonajes.vue"
+  },
+  "PrevNextRegiones": {
+    "description": "Auto imported from components/global/PrevNextRegiones.vue"
+  },
+  "PrevNextReyes": {
+    "description": "Auto imported from components/global/PrevNextReyes.vue"
+  },
+  "Header": {
+    "description": "Auto imported from components/Header.vue"
+  }
+}

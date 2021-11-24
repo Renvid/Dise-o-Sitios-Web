@@ -1,0 +1,79 @@
+[
+  {
+    "name": "batallas_index",
+    "path": "/batallas_index",
+    "component": "C:\\\\Users\\\\minor\\\\Desktop\\\\2021\\\\Segundo semestre\\\\Arquitectura\\\\proyecto-2---arquitectura-minor-navarro-y-alfredo-vargas\\\\pages\\\\batallas_index.vue",
+    "chunkName": "pages/batallas_index",
+    "_name": "_de3a2c5e"
+  },
+  {
+    "name": "casas_index",
+    "path": "/casas_index",
+    "component": "C:\\\\Users\\\\minor\\\\Desktop\\\\2021\\\\Segundo semestre\\\\Arquitectura\\\\proyecto-2---arquitectura-minor-navarro-y-alfredo-vargas\\\\pages\\\\casas_index.vue",
+    "chunkName": "pages/casas_index",
+    "_name": "_7ca1402a"
+  },
+  {
+    "name": "personajes_index",
+    "path": "/personajes_index",
+    "component": "C:\\\\Users\\\\minor\\\\Desktop\\\\2021\\\\Segundo semestre\\\\Arquitectura\\\\proyecto-2---arquitectura-minor-navarro-y-alfredo-vargas\\\\pages\\\\personajes_index.vue",
+    "chunkName": "pages/personajes_index",
+    "_name": "_54d81f1f"
+  },
+  {
+    "name": "regiones_index",
+    "path": "/regiones_index",
+    "component": "C:\\\\Users\\\\minor\\\\Desktop\\\\2021\\\\Segundo semestre\\\\Arquitectura\\\\proyecto-2---arquitectura-minor-navarro-y-alfredo-vargas\\\\pages\\\\regiones_index.vue",
+    "chunkName": "pages/regiones_index",
+    "_name": "_188190d5"
+  },
+  {
+    "name": "reyes_index",
+    "path": "/reyes_index",
+    "component": "C:\\\\Users\\\\minor\\\\Desktop\\\\2021\\\\Segundo semestre\\\\Arquitectura\\\\proyecto-2---arquitectura-minor-navarro-y-alfredo-vargas\\\\pages\\\\reyes_index.vue",
+    "chunkName": "pages/reyes_index",
+    "_name": "_04674612"
+  },
+  {
+    "name": "batallas-slug",
+    "path": "/batallas/:slug?",
+    "component": "C:\\\\Users\\\\minor\\\\Desktop\\\\2021\\\\Segundo semestre\\\\Arquitectura\\\\proyecto-2---arquitectura-minor-navarro-y-alfredo-vargas\\\\pages\\\\batallas\\\\_slug.vue",
+    "chunkName": "pages/batallas/_slug",
+    "_name": "_3b70357c"
+  },
+  {
+    "name": "casas-slug",
+    "path": "/casas/:slug?",
+    "component": "C:\\\\Users\\\\minor\\\\Desktop\\\\2021\\\\Segundo semestre\\\\Arquitectura\\\\proyecto-2---arquitectura-minor-navarro-y-alfredo-vargas\\\\pages\\\\casas\\\\_slug.vue",
+    "chunkName": "pages/casas/_slug",
+    "_name": "_7106ab7a"
+  },
+  {
+    "name": "personajes-slug",
+    "path": "/personajes/:slug?",
+    "component": "C:\\\\Users\\\\minor\\\\Desktop\\\\2021\\\\Segundo semestre\\\\Arquitectura\\\\proyecto-2---arquitectura-minor-navarro-y-alfredo-vargas\\\\pages\\\\personajes\\\\_slug.vue",
+    "chunkName": "pages/personajes/_slug",
+    "_name": "_13bcac24"
+  },
+  {
+    "name": "regiones-slug",
+    "path": "/regiones/:slug?",
+    "component": "C:\\\\Users\\\\minor\\\\Desktop\\\\2021\\\\Segundo semestre\\\\Arquitectura\\\\proyecto-2---arquitectura-minor-navarro-y-alfredo-vargas\\\\pages\\\\regiones\\\\_slug.vue",
+    "chunkName": "pages/regiones/_slug",
+    "_name": "_b0b32210"
+  },
+  {
+    "name": "reyes-slug",
+    "path": "/reyes/:slug?",
+    "component": "C:\\\\Users\\\\minor\\\\Desktop\\\\2021\\\\Segundo semestre\\\\Arquitectura\\\\proyecto-2---arquitectura-minor-navarro-y-alfredo-vargas\\\\pages\\\\reyes\\\\_slug.vue",
+    "chunkName": "pages/reyes/_slug",
+    "_name": "_6bb52716"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Users\\\\minor\\\\Desktop\\\\2021\\\\Segundo semestre\\\\Arquitectura\\\\proyecto-2---arquitectura-minor-navarro-y-alfredo-vargas\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_1c3f31a2"
+  }
+]
